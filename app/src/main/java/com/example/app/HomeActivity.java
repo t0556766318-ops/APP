@@ -169,7 +169,6 @@ public class HomeActivity extends android.app.Activity {
     private void installInsets(View view) {
         if (android.os.Build.VERSION.SDK_INT >= 30) {
             view.setOnApplyWindowInsetsListener((v, insets) -> {
-                WindowInsets.Type.InsetsType systemBars = null;
                 android.graphics.Insets bars =
                         insets.getInsets(WindowInsets.Type.systemBars());
                 v.setPadding(dp(18), bars.top + dp(8), dp(18), bars.bottom + dp(10));
